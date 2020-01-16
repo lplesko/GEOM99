@@ -67,7 +67,8 @@
             {
               origin: {query: document.getElementById('start').value},
               destination: {query: document.getElementById('end').value},
-              travelMode: 'TRANSIT'
+              travelMode: 'TRANSIT',
+              transit_mode: 'RAIL'
             },
             function(response, status) {
               if (status === 'OK') {
