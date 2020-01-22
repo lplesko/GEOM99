@@ -22,6 +22,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
+          // Changed lat to 0 to keep it centred on mid latitudes rather than being drowned by Antarctica.
           center: new google.maps.LatLng(0,-187.3),
           mapTypeId: 'terrain'
         });
