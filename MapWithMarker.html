@@ -9,7 +9,6 @@
        }
       body {
         font-family: Arial;
-        color: evergreen;
       }
     </style>
   </head>
@@ -21,13 +20,13 @@
     <script>
 // Initialize and add the map
 function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
+  // The location of High Park (Toronto)
+  var highpark = {lat: 43.645, lng: -79.463};
+  // The map, centered at High Park
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+      document.getElementById('map'), {zoom: 11, center: highpark});
+  // The marker, positioned at High Park
+  var marker = new google.maps.Marker({position: highpark, map: map});
 }
     </script>
     <!--Load the API from the specified URL
