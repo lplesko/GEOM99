@@ -52,6 +52,30 @@
           {placeName: "Central Library", lat: 43.587515, lng: -79.643652} // Central Library
         ]
       
+        // Help from https://stackoverflow.com/questions/11106671/google-maps-api-multiple-markers-with-infowindows
+        window.onload = function () {
+          initMap();
+        };
+      
+        function addMarkerInfo() {
+          for (var i = 0; i < locations.length; i++) {
+            var contentString = '<div id="content"><h4>' + locations[i].placeName + '</h4></div>';
+
+                    const marker = new google.maps.Marker({
+                        position: markersOnMap[i].LatLng[0],
+                        map: map
+                    });
+
+                    const infowindow = new google.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 200
+                    });
+
+                    marker.addListener('click', function () {
+                        closeOtherInfo();
+                        infowindow.open(marker.get('map'), marker);
+                        InforObj[0] = infowindow;
+                    });
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
