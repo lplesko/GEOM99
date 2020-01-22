@@ -54,7 +54,24 @@
           {lat: 43.531075, lng: -79.627602}, // Lorne Park Library
           {lat: 43.587515, lng: -79.643652} // Central Library
         ]
-      
+        var contentString = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Humber College, Lakeshore Campus</h1>'+
+          '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: {lat: 43.597759, lng: -79.517356},
+          map: map,
+          title: 'Humber College, Lakeshore Campus'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
       
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
