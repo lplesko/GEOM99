@@ -35,7 +35,8 @@
         // The map() method here has nothing to do with the Google Maps API.
         var markers = locations.map(function(location, i) {
           return new google.maps.Marker({
-            position: location,
+            position: location
+              var infowindow = new google.maps.InfoWindow({
           });
         });
 
@@ -43,70 +44,6 @@
         var markerCluster = new MarkerClusterer(map, markers,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
         
-        // Marker info window for Humber College.
-        var contentString = '<div id="content">'+
-          '<h4>Humber College, Lakeshore Campus</h4>'+
-          '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-        
-        // Marker info window for Erin Meadows.
-        var contentString = '<div id="content">'+
-          '<h4>Erin Meadows Library</h4>'+
-          '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-                
-        // Marker info window for Lakeview.
-        var contentString = '<div id="content">'+
-          '<h4>Lakeview Library</h4>'+
-          '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-                
-        // Marker info window for Lorne Park.
-        var contentString = '<div id="content">'+
-          '<h4>Lorne Park Library</h4>'+
-          '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-                
-        // Marker info window for Central.
-        var contentString = '<div id="content">'+
-          '<h4>Central Library</h4>'+
-          '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
       }
         var locations = [
           {lat: 43.597759, lng: -79.517356}, // Humber College, Lakeshore Campus
