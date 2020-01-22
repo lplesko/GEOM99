@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Marker Clustering</title>
+    <title>Marker Clustering of Exam Proctor Locations</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -23,16 +23,16 @@
     <script>
 
       function initMap() {
-        // Create map centred on Slovenia.
+        // Create map centred on Mississauga/Etobicoke area
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
-          center: {lat: 46.073, lng: 14.753}
+          zoom: 9,
+          center: {lat: 43.573396, lng: -79.630133}
         });
 
         // Create an array of alphabetical characters used to label the markers.
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-        // Add some markers to the map showing my grandparents' home villages.
+        // Add some markers to the map showing locations where I've gone to write exams for this program.
         // Note: The code uses the JavaScript Array.prototype.map() method to
         // create an array of markers based on a given "locations" array.
         // The map() method here has nothing to do with the Google Maps API.
@@ -48,10 +48,11 @@
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
       }
       var locations = [
-        {lat: 46.054059, lng: 14.415542},
-        {lat: 45.956749, lng: 14.529925},
-        {lat: 46.051187, lng: 14.110171},
-        {lat: 46.257237, lng: 13.614311}
+        {lat: 43.597759, lng: -79.517356}, // Humber College, Lakeshore Campus
+        {lat: 43.557027, lng: -79.717563}, // Erin Meadows Library
+        {lat: 43.583389, lng: -79.563297}, // Lakeview Library
+        {lat: 43.531075, lng: -79.627602} // Lorne Park Library
+        {lat: 43.587515, lng: -79.643652} // Central Library
       ]
     </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
